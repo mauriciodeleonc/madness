@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Madness Eventos</title>
+
+<link rel="apple-touch-icon" sizes="57x57" href="fotos/icons/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="fotos/icons/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="fotos/icons/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="fotos/icons/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="fotos/icons/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="fotos/icons/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="fotos/icons/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="fotos/icons/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="fotos/icons/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="fotos/icons/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="fotos/icons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="fotos/icons/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="fotos/icons/favicon-16x16.png">
+ <link rel="manifest" href="manifest.json">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+
+  <!-- Template styles -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Open+Sans+Condensed:300|Oswald:300,400" rel="stylesheet">
+
+<style>
+
+  .bgimg {
+      background-image: url('fotos/112.png');
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      font-family: "Anton", Courier, monospace;
+      font-size: 100px;
+  }
+
+  .topleft {
+      position: absolute;
+      top: 0;
+      left: 16px;
+  }
+
+  .bottomleft {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+  }
+
+  .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+  }
+
+  hr {
+      margin: auto;
+      width: 100%;
+      color: white;
+  }
+
+</style>
+
+</head>
+
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <img style="max-width: 150px; margin-top= -7px;" src="fotos/madness-letters-tr.png">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav1">
+              <ul class="nav navbar-nav mr-auto navbar-center" style="font-family:'Oswald', sans-serif; font-size:25px;">
+                  <li class="nav-item">
+                      <a class="nav-link" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="paquetes.html">Paquetes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="inicio.html">Categorias</a>
+                  </li>
+             </ul>
+             <ul class="nav navbar-nav ml-auto">                  
+                  <li class="nav-item">
+                      <a class="nav-link icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                  </li>
+                  <li class="nav-item ">
+                      <a class="nav-link icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                  </li>
+              </ul>
+           <form class="form-inline waves-effect waves-light"></form>
+          </div>
+    </nav>
+  <!--/.Navbar-->
+
+<div class="bgimg">
+  <div class="middle">
+    <h1 style="font-size:50px">COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+</div>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jul 10, 2017 00:00:00").getTime();
+
+  // Update the count down every 1 second
+  var countdownfunction = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(countdownfunction);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+</script>
+
+<!--Footer-->
+  <footer class="page-footer center-on-small-only">
+      <!--Call to action-->
+      <div class="call-to-action">
+          <a class="navbar-brand navbar-center" href="index.html">
+              <img style="max-width: 200px;" src="fotos/madness-letters-tr.png">
+          </a>
+           <ul class="footer-center">
+              <li><a class="icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li><a class="icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+         </ul>
+      </div>
+      <!--/.Call to action-->
+
+      <!--Copyright-->
+      <div class="footer-copyright">
+          <div class="container-fluid" style="float: left; font-size: 14px;">
+              © 2017 By: <a href="#" target="_self"> Mauricio De León Cárdenas </a>
+          </div>
+      </div>
+      <!--/.Copyright-->
+  </footer>
+<!--/.Footer-->
+
+  <!-- SCRIPTS -->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+</body>
+
+</html>

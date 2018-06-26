@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Madness Eventos</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="fotos/icons/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="fotos/icons/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="fotos/icons/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="fotos/icons/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="fotos/icons/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="fotos/icons/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="fotos/icons/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="fotos/icons/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="fotos/icons/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="fotos/icons/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="fotos/icons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="fotos/icons/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="fotos/icons/favicon-16x16.png">
+ <link rel="manifest" href="manifest.json">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/lightbox.css" rel="stylesheet">
+
+    <link href="css/footer.css" rel="stylesheet">
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Open+Sans+Condensed:300|Oswald:300,400" rel="stylesheet">
+
+  <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .row > .column {
+          padding: 0 8px;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .column {
+          float: left;
+          width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          width: 100%;
+          max-width: 700px;
+          display: block;
+        }
+
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 80px;
+          right: 40px;
+          font-size: 35px;
+          font-weight: bold;
+          transition: 0.5s;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        .cursor {
+          cursor: pointer
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        img {
+          margin-bottom: -4px;
+          max-width: 100%;
+        }
+
+        .caption-container {
+          text-align: center;
+          background-color: black;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s
+        }
+
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 1.0)
+        }
+
+        .thumbnails {
+          margin-right: -20px;
+        }
+
+        .thumbnails a {
+          float: left;
+          padding-top: 10px;
+          padding-right: 10px;
+          padding-left: 10px;
+          margin-bottom: 15px;
+        }
+
+        .top-nav-collapse {
+            background-color: black;
+        }
+
+        .view {
+            background: url("fotos/IMG_2482.png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .scrollbar {
+          margin-left: .5px;
+          margin-top: 5px;
+          width: 100%;
+          display: block;
+          height: 560px;
+          margin-bottom: -70px;
+        }
+
+        @media screen and (max-height: 450px) {
+           .scrollbar {margin-top: 30px;}
+        }
+
+
+  </style>
+
+</head>
+
+<body>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img style="max-width: 150px; margin-top= -7px;" src="fotos/madness-letters-tr.png">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="nav navbar-nav mr-auto navbar-center" style="font-family:'Oswald', sans-serif; font-size:25px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paquetes.html">Paquetes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inicio.html">Categorias</a>
+                        </li>
+                   </ul>
+                   <ul class="nav navbar-nav ml-auto">                        
+                        <li class="nav-item">
+                            <a class="nav-link icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                        </li>
+                    </ul>
+                 <form class="form-inline waves-effect waves-light"></form>
+                </div>
+          </nav>
+        <!--/.Navbar-->
+
+
+
+      <div class="view hm-black-light">
+        <div class="mask pattern-2">
+          <div class="full-bg-img flex-center">
+
+                <div class="thumbnails">
+                  <div class="scrollbar" style="overflow-y: scroll;">
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/1.png" data-lightbox="gallery">
+                              <img src="fotos/1.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/2.png" data-lightbox="gallery">
+                              <img src="fotos/2.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/5.png" data-lightbox="gallery">
+                              <img src="fotos/5.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/8.png" data-lightbox="gallery">
+                              <img src="fotos/8.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/11.png" data-lightbox="gallery">
+                              <img src="fotos/11.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/14.png" data-lightbox="gallery">
+                              <img src="fotos/14.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/32.png" data-lightbox="gallery">
+                              <img src="fotos/32.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/50.png" data-lightbox="gallery">
+                              <img src="fotos/50.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/57.png" data-lightbox="gallery">
+                              <img src="fotos/57.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/69.png" data-lightbox="gallery">
+                              <img src="fotos/69.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/85.png" data-lightbox="gallery">
+                              <img src="fotos/85.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/101.png" data-lightbox="gallery">
+                              <img src="fotos/101.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/112.png" data-lightbox="gallery">
+                              <img src="fotos/112.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/114.png" data-lightbox="gallery">
+                              <img src="fotos/114.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/117.png" data-lightbox="gallery">
+                              <img src="fotos/117.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/119.png" data-lightbox="gallery">
+                              <img src="fotos/119.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/120.png" data-lightbox="gallery">
+                              <img src="fotos/120.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/121.png" data-lightbox="gallery">
+                              <img src="fotos/121.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/122.png" data-lightbox="gallery">
+                              <img src="fotos/122.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/123.png" data-lightbox="gallery">
+                              <img src="fotos/123.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/124.png" data-lightbox="gallery">
+                              <img src="fotos/124.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/125.png" data-lightbox="gallery">
+                              <img src="fotos/125.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/126.png" data-lightbox="gallery">
+                              <img src="fotos/126.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/127.png" data-lightbox="gallery">
+                              <img src="fotos/127.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/128.png" data-lightbox="gallery">
+                              <img src="fotos/128.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/129.png" data-lightbox="gallery">
+                              <img src="fotos/129.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/130.png" data-lightbox="gallery">
+                              <img src="fotos/130.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/131.png" data-lightbox="gallery">
+                              <img src="fotos/131.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/132.png" data-lightbox="gallery">
+                              <img src="fotos/132.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/133.png" data-lightbox="gallery">
+                              <img src="fotos/133.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/134.png" data-lightbox="gallery">
+                              <img src="fotos/134.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/135.png" data-lightbox="gallery">
+                              <img src="fotos/135.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/136.png" data-lightbox="gallery">
+                              <img src="fotos/136.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/137.png" data-lightbox="gallery">
+                              <img src="fotos/137.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/138.png" data-lightbox="gallery">
+                              <img src="fotos/138.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/139.png" data-lightbox="gallery">
+                              <img src="fotos/139.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/140.png" data-lightbox="gallery">
+                              <img src="fotos/140.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/141.png" data-lightbox="gallery">
+                              <img src="fotos/141.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/142.png" data-lightbox="gallery">
+                              <img src="fotos/142.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/143.png" data-lightbox="gallery">
+                              <img src="fotos/143.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/144.png" data-lightbox="gallery">
+                              <img src="fotos/144.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/145.png" data-lightbox="gallery">
+                              <img src="fotos/145.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/146.png" data-lightbox="gallery">
+                              <img src="fotos/146.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/147.png" data-lightbox="gallery">
+                              <img src="fotos/147.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/148.png" data-lightbox="gallery">
+                              <img src="fotos/148.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/149.png" data-lightbox="gallery">
+                              <img src="fotos/149.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/150.png" data-lightbox="gallery">
+                              <img src="fotos/150.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/151.png" data-lightbox="gallery">
+                              <img src="fotos/151.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/152.png" data-lightbox="gallery">
+                              <img src="fotos/152.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/153.png" data-lightbox="gallery">
+                              <img src="fotos/153.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/154.png" data-lightbox="gallery">
+                              <img src="fotos/154.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/155.png" data-lightbox="gallery">
+                              <img src="fotos/155.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/156.png" data-lightbox="gallery">
+                              <img src="fotos/156.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/157.png" data-lightbox="gallery">
+                              <img src="fotos/157.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/158.png" data-lightbox="gallery">
+                              <img src="fotos/158.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/159.png" data-lightbox="gallery">
+                              <img src="fotos/159.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/160.png" data-lightbox="gallery">
+                              <img src="fotos/160.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/161.png" data-lightbox="gallery">
+                              <img src="fotos/161.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2328.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2328.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2471.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2471.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/IMG_2473.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2473.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2474.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2474.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2476.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2476.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2478.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2478.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                        <div clas="row">
+                          <div class="column">
+                            <a href="fotos/IMG_2480.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2480.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2481.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2481.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2482.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2482.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                          <div class="column">
+                            <a href="fotos/IMG_2483.png" data-lightbox="gallery">
+                              <img src="fotos/IMG_2483.png" style="width:100%" class="hover-shadow cursor">
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+      <footer class="page-footer center-on-small-only">
+
+          <!--Call to action-->
+          <div class="call-to-action">
+              <a class="navbar-brand navbar-center" href="index.html">
+                  <img style="max-width: 200px;" src="fotos/madness-letters-tr.png">
+              </a>
+               <ul class="footer-center">
+                  <li><a class="icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                  <li><a class="icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+             </ul>
+          </div>
+          <!--/.Call to action-->
+
+          <!--Copyright-->
+          <div class="footer-copyright">
+              <div class="container-fluid" style="float: left; font-size: 14px;">
+                  © 2017 By: <a href="#" target="_self"> Mauricio De León Cárdenas </a>
+              </div>
+          </div>
+          <!--/.Copyright-->
+
+      </footer>
+
+  <!--/.Footer-->
+
+
+  <!-- SCRIPTS -->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+
+  </body>
+
+</html>

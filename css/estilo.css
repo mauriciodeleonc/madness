@@ -1,0 +1,220 @@
+.view {
+      background-color: black;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+  }
+
+    /* The side navigation menu */
+  .sidenav {
+     height: 100%; /* 100% Full-height */
+     width: 15%;
+     margin-left: 0;
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Stay on top */
+     top: 0;
+     left: 0;
+     background-color: #111; /* Black*/
+     overflow-x: hidden; /* Disable horizontal scroll */
+     padding-top: 90px; /* Place content 60px from the top */
+     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+     margin-left: 10%;
+     padding: 10px 5px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #818181;
+     display: block;
+     transition: 0.3s
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover, .offcanvas a:focus{
+     color: #f1f1f1;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+  }
+
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+     transition: margin-left .5s;
+     margin-left: 10%;
+  }
+
+  .scrollbar {
+    margin-left: 2px;
+    margin-top: 70px;
+    width: 107%;
+    display: block;
+    height: 610px;
+    margin-bottom: -80px;
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+     .sidenav {padding-top: 15px;}
+     .sidenav a {font-size: 18px;}
+  }
+
+  .navbar {
+      background-color: #111;
+  }
+
+  section {
+      height: 100%
+  }
+
+  .comida-bg {
+    background-image: url(/madness/fotos/IMG_2472.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .bebida-bg {
+    background-image: url(/madness/fotos/79.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .musica-bg {
+    background-image: url(/madness/fotos/89.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .personal-bg {
+    background-image: url(/madness/fotos/32.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .mobiliario-bg {
+    background-image: url(/madness/fotos/5.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: inherit;
+  }
+
+  .entretenimiento-bg {
+    background-image: url(/madness/fotos/124.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: inherit;
+  }
+
+  .bg-categorias {
+    background-image: url(/madness/fotos/categorias.png);
+    background-attachment: fixed;
+    background-position: right;
+    background-size: 83.5%;
+    position: relative;
+    background-repeat: no-repeat;
+    height: inherit;
+  }
+
+
+  .product-title {
+    font-family: "Fjalla One";
+    font-size: 100px;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: -5px;
+    color:white;
+  }
+
+
+  @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+
+  figure.snip1195 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 400px;
+  max-width: 480px;
+  width: 25%;
+  background: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  button.accordion {
+     color: white;
+     cursor: pointer;
+     padding: 20px;
+     width: 90%;
+     text-align: left;
+     transition: 0.4s;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  button.accordion.active, button.accordion:hover {
+     background-color: transparent;
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  div.panel {
+     padding: 0 18px;
+     background-color: transparent;
+     display: none;
+     color: black;
+     width: 90%;
+     font-size: 20px;
+
+  }
+
+  .middle {
+    padding-left: 8%;
+    padding-right: 10%;
+    opacity: 0.6;
+  }
+
+  .middle a {
+    color: white;
+  }
+
+.scrollbar-category {
+  margin-top: -15px;
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 98%;
+  display: block;
+  height: 440px;
+}

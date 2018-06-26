@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>Madness Eventos</title>
+
+
+
+  
+  <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Open+Sans+Condensed:300|Oswald:300,400" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <img style="max-width: 150px; margin-top= -7px;" src="fotos/madness-letters-tr.png">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav mr-auto navbar-center nav ul" style="font-family:'Oswald', sans-serif; font-size:25px;">
+                  <li class="nav-item ">
+                      <a class="nav-link" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="paquetes.html">Paquetes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="categorias.html">Categorias</a>
+                  </li>
+             </ul>
+             <ul class="nav navbar-nav ml-auto navbar-right " >
+                  <li class="nav-item">
+                      <a id="carritoCompra"  href="#" rel="popover"  title="Cotizar" data-placement="bottom" data-content="">
+                        <i class="fa fa-shopping-cart fa-2x"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                  </li>
+                  <li class="nav-item ">
+                      <a class="nav-link icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                  </li>
+              </ul>
+           <form class="form-inline waves-effect waves-light"></form>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <div id="mySidenav" class="sidenav" style="font-family:Oswald">
+        <a class="menuSel" id="btcomida" href="#">Comida</a>
+        <a class="menuSel" id="btbebida" href="#">Bebida</a>
+        <a class="menuSel" id="btmusica" href="#">Música</a>
+        <a class="menuSel" id="btpersonal" href="#">Personal</a>
+        <a class="menuSel" id="btmobiliario" href="#">Mobiliario</a>
+        <a class="menuSel" id="btentretenimiento" href="#" style="margin-bottom:30%;">Entretenimiento</a>
+        <a class="navbar-brand navbar-center" href="index.html">
+            <img style="max-width: 150px;" src="fotos/madness-letters-tr.png">
+        </a>
+         <a class="icons-sm fb-ic" href="https://www.facebook.com/Madness-540948512733214/?fref=ts" target="_blank" style="display:inline-block; padding-left:20%;"><i class="fa fa-facebook"></i></a>
+         <a class="icons-sm ins-ic"  href="https://www.instagram.com/madness.eventos/" target="_blank" style="display:inline-block;"><i class="fa fa-instagram"></i></a>
+         <a href="#" target="_self" style="font-size: 12px;"> © 2017 By: <br> Mauricio De León Cárdenas </a>
+
+         </div>
+        </div>
+        <div id="principal" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+             
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addQty">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Cantidad</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-inline">
+             <div class="form-group">
+                <label for="exampleInputName2">Cantidad</label>
+                <input type="text" class="form-control" id="cantidad" placeholder="">
+            </div>
+            </div>
+            <input type="hidden"  id="prodSel" value="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="addSC2">Agregar Carrito</button>
+        </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    
+    </div><!-- /.modal -->
+    <!-- Nuevo -->
+    <div class="modal fade" id="ShopCart">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Carrito de Compras</h4>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="btnCot">Cotizar</button>
+        </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Fin Nuevo -->
+    <!-- Nuevo -->
+    <div class="modal fade" id="cotizar">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Cotizar</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="cnombre" class="col-2 col-form-label">Nombre</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="" id="cnombre">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cemail" class="col-2 col-form-label">Email</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="" id="cemail">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ctel" class="col-2 col-form-label">Telefono</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" value="" id="ctel">
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="cfecha" class="col-2 col-form-label">Fecha</label>
+                <div class='input-group date' id='datetimepicker2'>
+                    <input id="cfecha" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="clugar" class="col-2 col-form-label">Lugar</label>
+                <div class="col-10">
+                    <textarea  class="form-control" rows="3" value="" id="clugar"></textarea>
+                </div>
+            </div>
+                        
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="btnEnvCot">Enviar Cotizar</button>
+        </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Fin Nuevo -->
+   <!-- SCRIPTS -->
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/moment-with-locales.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script> 
+  <script src="js/shoppingcart.js"></script>     
+    </body>
+</html>
